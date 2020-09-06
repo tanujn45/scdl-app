@@ -2,11 +2,12 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Card, Text, Avatar, Button } from "@ui-kitten/components";
 import { mainStyles } from "../../Styles/Styles";
-import Colors from "../../Constants/Colors";
+import Header from "../../Components/Header";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.screen}>
+      <Header navigation={navigation} headingTitle="Home" />
       <Text>Home Screen</Text>
     </View>
   );
@@ -14,10 +15,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#f1f1f1",
+    paddingTop: 40,
   },
 });
 

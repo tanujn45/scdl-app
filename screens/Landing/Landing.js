@@ -48,7 +48,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#f1f1f1",
   },
-  topContainer: { alignItems: "center", flex: 2, justifyContent: "center" },
+  topContainer: {
+    alignItems: "center",
+    flex: 2,
+    justifyContent: "center",
+  },
   logoContainer: {
     width: 150,
     height: 150,
