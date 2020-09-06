@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Dimensions } from "react-native";
 import { Card, Text, Avatar, Button } from "@ui-kitten/components";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
@@ -7,8 +7,11 @@ import { RFValue, RFPercentage } from "react-native-responsive-fontsize";
 
 const Landing = ({ navigation }) => {
   const homeNavigation = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Drawer");
   };
+
+  const windowWidth = Dimensions.get("window").width;
+  const windowHeight = Dimensions.get("window").height;
 
   return (
     <View style={styles.screen}>
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: "center",
-    fontSize: RFPercentage(4),
+    fontSize: 40,
     textTransform: "uppercase",
     color: Colors.primary,
     fontFamily: "monRegular",

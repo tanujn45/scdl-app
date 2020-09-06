@@ -1,9 +1,10 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import { AppLoading } from "expo";
 import * as eva from "@eva-design/eva";
 import { ApplicationProvider, Layout, Text } from "@ui-kitten/components";
 import Landing from "./screens/Landing/Landing";
+import Drawer from "./Navigators/Drawer";
 import Home from "./screens/Home/Home";
 
 import {
@@ -22,7 +23,6 @@ export default function App() {
     monBold: Montserrat_700Bold,
   });
 
-  console.log("test log");
   if (!fontLoaded) {
     return <AppLoading />;
   }
@@ -35,7 +35,7 @@ export default function App() {
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Landing" component={Landing} />
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Drawer" component={Drawer} />
         </Stack.Navigator>
       </NavigationContainer>
     </ApplicationProvider>
