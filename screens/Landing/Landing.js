@@ -1,41 +1,36 @@
 import React from "react";
-import { StyleSheet, View, Dimensions } from "react-native";
-import { Card, Text, Avatar, Button } from "@ui-kitten/components";
+import { StyleSheet, View, Text, Button, Image } from "react-native";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
-import { RFValue, RFPercentage } from "react-native-responsive-fontsize";
+import { TouchableHighlight } from "react-native-gesture-handler";
 
 const Landing = ({ navigation }) => {
   const homeNavigation = () => {
     navigation.navigate("Drawer");
   };
 
-  const windowWidth = Dimensions.get("window").width;
-  const windowHeight = Dimensions.get("window").height;
-
   return (
     <View style={styles.screen}>
       <View style={styles.topContainer}>
-        <Card style={mainStyles.cardContainer}>
-          <Avatar
+        <View style={[mainStyles.cardContainer, styles.cardContainer]}>
+          <Image
             style={styles.logoContainer}
-            shape="square"
             source={require("../../assets/img/symbiosis.png")}
           />
-        </Card>
+        </View>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Symbiosis</Text>
           <Text style={styles.subtitle}>Center for distance learning</Text>
         </View>
       </View>
       <View style={styles.bottomContainer}>
-        <Button
+        <TouchableHighlight
           style={mainStyles.buttonContainer}
-          size="large"
           onPress={homeNavigation}
+          underlayColor={Colors.background}
         >
           <Text style={mainStyles.buttonText}>Enter to explore</Text>
-        </Button>
+        </TouchableHighlight>
       </View>
     </View>
   );
@@ -46,12 +41,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f1f1f1",
+    backgroundColor: Colors.background,
   },
   topContainer: {
     alignItems: "center",
     flex: 2,
     justifyContent: "center",
+  },
+  cardContainer: {
+    padding: 15,
   },
   logoContainer: {
     width: 150,

@@ -1,22 +1,17 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { Card, Text, Avatar, Button } from "@ui-kitten/components";
+import { StyleSheet, View, Text } from "react-native";
 import { mainStyles } from "../../Styles/Styles";
 import Header from "../../Components/Header";
 
 const Home = ({ navigation }) => {
   return (
-    <View style={styles.screen}>
+    <View style={mainStyles.screen}>
       <Header navigation={navigation} headingTitle="Home" />
       <Text>Home Screen</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  screen: {
-    paddingTop: 40,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default Home;

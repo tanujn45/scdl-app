@@ -1,14 +1,14 @@
 import React from "react";
-import { StyleSheet, View, TouchableHighlight } from "react-native";
+import { StyleSheet, View, TouchableHighlight, Image } from "react-native";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItem,
-  DrawerItemList,
 } from "@react-navigation/drawer";
+import Programs from "../screens/Programs/Programs";
 import Home from "../screens/Home/Home";
+import ImpDates from "../screens/ImpDates/ImpDates";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Card, Avatar } from "@ui-kitten/components";
 import { mainStyles } from "../Styles/Styles";
 import Colors from "../Constants/Colors";
 import { Feather } from "@expo/vector-icons";
@@ -30,31 +30,30 @@ const CustomDrawerContent = (props) => {
         >
           <Feather name="arrow-left" size={26} color="white" />
         </TouchableHighlight>
-        <Card style={styles.drawerContainer}>
-          <Avatar
+        <View style={[mainStyles.cardContainer, styles.drawerContainer]}>
+          <Image
             style={styles.logoContainer}
-            shape="square"
             source={require("../assets/img/symbiosis.png")}
           />
-        </Card>
+        </View>
       </View>
       <DrawerItem
         label="Home"
-        onPress={() => props.navigation.navigate("ProgramsNavigator")}
+        onPress={() => props.navigation.navigate("Home")}
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
       <View style={styles.drawerBorder} />
       <DrawerItem
-        label="Home"
-        onPress={() => props.navigation.navigate("ProgramsNavigator")}
+        label="Programs"
+        onPress={() => props.navigation.navigate("Programs")}
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
       <View style={styles.drawerBorder} />
       <DrawerItem
-        label="Home"
-        onPress={() => props.navigation.navigate("ProgramsNavigator")}
+        label="Important Dates"
+        onPress={() => props.navigation.navigate("ImpDates")}
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
@@ -67,6 +66,8 @@ const Screens = ({ navigation }) => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Programs" component={Programs} />
+      <Stack.Screen name="ImpDates" component={ImpDates} />
     </Stack.Navigator>
   );
 };
