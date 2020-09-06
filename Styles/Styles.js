@@ -7,7 +7,6 @@ const mainStyles = StyleSheet.create({
     paddingTop: 40,
   },
   cardTouchContainer: {
-    backgroundColor: "#000",
     height: 100,
     width: "90%",
     alignSelf: "center",
