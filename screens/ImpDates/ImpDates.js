@@ -3,7 +3,7 @@ import { StyleSheet, View, Image, Text } from "react-native";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import Header from "../../Components/Header";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, TouchableHighlight } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
 
 const ImpDates = ({ navigation }) => {
@@ -37,21 +37,23 @@ const ImpDates = ({ navigation }) => {
 
   const ImpDatesItem = (item) => {
     return (
-      <View
-        style={[mainStyles.cardContainer, mainStyles.cardContainerSpecific]}
-      >
-        <View style={mainStyles.cardLeftContainer}>
-          <Text style={styles.date}>{item.date.slice(0, 2)}</Text>
-          <Text style={styles.month}>{item.date.slice(3, 6)}</Text>
-        </View>
-        <View style={mainStyles.cardRightContainer}>
-          <Text style={mainStyles.cardTitle}>{item.title}</Text>
-          <View style={mainStyles.cardLMContainer}>
-            <Text style={mainStyles.cardLMText}>Learn More</Text>
-            <Feather name="arrow-right" size={17} color={Colors.grey} />
+      <TouchableHighlight style={mainStyles.cardTouchContainer}>
+        <View
+          style={[mainStyles.cardContainer, mainStyles.cardContainerSpecific]}
+        >
+          <View style={mainStyles.cardLeftContainer}>
+            <Text style={styles.date}>{item.date.slice(0, 2)}</Text>
+            <Text style={styles.month}>{item.date.slice(3, 6)}</Text>
+          </View>
+          <View style={mainStyles.cardRightContainer}>
+            <Text style={mainStyles.cardTitle}>{item.title}</Text>
+            <View style={mainStyles.cardLMContainer}>
+              <Text style={mainStyles.cardLMText}>Learn More</Text>
+              <Feather name="arrow-right" size={17} color={Colors.grey} />
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableHighlight>
     );
   };
 
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
   date: {
     color: "#fff",
     fontSize: 28,
-    fontFamily: "monBold",
+    fontFamily: "robotoBold",
   },
   month: {
     color: "#fff",
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
     paddingTop: 3,
     letterSpacing: 2,
     fontSize: 16,
-    fontFamily: "monRegular",
+    fontFamily: "robotoRegular",
   },
 });
 

@@ -6,6 +6,14 @@ const mainStyles = StyleSheet.create({
     backgroundColor: Colors.background,
     paddingTop: 40,
   },
+  cardTouchContainer: {
+    backgroundColor: "#000",
+    height: 100,
+    width: "90%",
+    alignSelf: "center",
+    marginVertical: 10,
+    borderRadius: 10,
+  },
   cardContainer: {
     shadowColor: "black",
     shadowOffset: { width: 0, height: 2 },
@@ -16,11 +24,11 @@ const mainStyles = StyleSheet.create({
     borderRadius: 20,
   },
   cardContainerSpecific: {
-    width: "90%",
+    width: "100%",
     alignSelf: "center",
     borderRadius: 10,
     height: 100,
-    marginVertical: 10,
+    // marginVertical: 10,
     flexDirection: "row",
   },
   cardLeftContainer: {
@@ -42,7 +50,7 @@ const mainStyles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 20,
-    fontFamily: "monRegular",
+    fontFamily: "robotoRegular",
   },
   cardLMContainer: {
     flexDirection: "row",
@@ -52,7 +60,7 @@ const mainStyles = StyleSheet.create({
     color: Colors.grey,
     fontSize: 15,
     paddingRight: 3,
-    fontFamily: "monRegular",
+    fontFamily: "robotoRegular",
   },
   buttonContainer: {
     paddingVertical: 15,

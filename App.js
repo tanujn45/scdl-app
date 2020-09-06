@@ -6,9 +6,9 @@ import Drawer from "./Navigators/Drawer";
 
 import {
   useFonts,
-  Montserrat_400Regular,
-  Montserrat_700Bold,
-} from "@expo-google-fonts/montserrat";
+  Roboto_400Regular,
+  Roboto_700Bold,
+} from "@expo-google-fonts/roboto";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -16,8 +16,8 @@ const Stack = createStackNavigator();
 
 export default function App() {
   let [fontLoaded] = useFonts({
-    monRegular: Montserrat_400Regular,
-    monBold: Montserrat_700Bold,
+    robotoRegular: Roboto_400Regular,
+    robotoBold: Roboto_700Bold,
   });
 
   if (!fontLoaded) {

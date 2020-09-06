@@ -63,12 +63,12 @@ const styles = StyleSheet.create({
     fontSize: 40,
     textTransform: "uppercase",
     color: Colors.primary,
-    fontFamily: "monRegular",
+    fontFamily: "robotoRegular",
   },
   subtitle: {
     textAlign: "center",
     textTransform: "uppercase",
-    fontFamily: "monRegular",
+    fontFamily: "robotoRegular",
   },
   bottomContainer: {
     flex: 1,

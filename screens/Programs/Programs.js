@@ -3,8 +3,9 @@ import { StyleSheet, View, Image, Text } from "react-native";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import Header from "../../Components/Header";
-import { FlatList } from "react-native-gesture-handler";
+import { FlatList, TouchableHighlight } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
+import ProgramDetails from "./ProgramDetails";
 
 const Program = ({ navigation }) => {
   const [data, setData] = useState([
@@ -39,21 +40,30 @@ const Program = ({ navigation }) => {
   ]);
 
   const ProgramsItem = (item) => {
+    const goToProgramDetails = () => {
+      navigation.navigate("ProgramDetails");
+    };
+
     return (
-      <View
-        style={[mainStyles.cardContainer, mainStyles.cardContainerSpecific]}
+      <TouchableHighlight
+        onPress={goToProgramDetails}
+        style={mainStyles.cardTouchContainer}
       >
-        <View style={mainStyles.cardLeftContainer}>
-          <Image style={mainStyles.cardImage} source={item.image} />
-        </View>
-        <View style={mainStyles.cardRightContainer}>
-          <Text style={mainStyles.cardTitle}>{item.title}</Text>
-          <View style={mainStyles.cardLMContainer}>
-            <Text style={mainStyles.cardLMText}>Learn More</Text>
-            <Feather name="arrow-right" size={17} color={Colors.grey} />
+        <View
+          style={[mainStyles.cardContainer, mainStyles.cardContainerSpecific]}
+        >
+          <View style={mainStyles.cardLeftContainer}>
+            <Image style={mainStyles.cardImage} source={item.image} />
+          </View>
+          <View style={mainStyles.cardRightContainer}>
+            <Text style={mainStyles.cardTitle}>{item.title}</Text>
+            <View style={mainStyles.cardLMContainer}>
+              <Text style={mainStyles.cardLMText}>Learn More</Text>
+              <Feather name="arrow-right" size={17} color={Colors.grey} />
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableHighlight>
     );
   };
 

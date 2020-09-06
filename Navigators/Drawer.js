@@ -8,10 +8,12 @@ import {
 import Programs from "../screens/Programs/Programs";
 import Home from "../screens/Home/Home";
 import ImpDates from "../screens/ImpDates/ImpDates";
+import Contact from "../screens/Contact/Contact";
 import { createStackNavigator } from "@react-navigation/stack";
 import { mainStyles } from "../Styles/Styles";
 import Colors from "../Constants/Colors";
 import { Feather } from "@expo/vector-icons";
+import ProgramsNavigator from "./ProgramsNavigator";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -46,7 +48,7 @@ const CustomDrawerContent = (props) => {
       <View style={styles.drawerBorder} />
       <DrawerItem
         label="Programs"
-        onPress={() => props.navigation.navigate("Programs")}
+        onPress={() => props.navigation.navigate("ProgramNavigator")}
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
@@ -54,6 +56,13 @@ const CustomDrawerContent = (props) => {
       <DrawerItem
         label="Important Dates"
         onPress={() => props.navigation.navigate("ImpDates")}
+        labelStyle={styles.drawerOptionText}
+        style={styles.drawerOptionBack}
+      />
+      <View style={styles.drawerBorder} />
+      <DrawerItem
+        label="Contact Us"
+        onPress={() => props.navigation.navigate("Contact")}
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
@@ -66,8 +75,9 @@ const Screens = ({ navigation }) => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Programs" component={Programs} />
+      <Stack.Screen name="ProgramNavigator" component={ProgramsNavigator} />
       <Stack.Screen name="ImpDates" component={ImpDates} />
+      <Stack.Screen name="Contact" component={Contact} />
     </Stack.Navigator>
   );
 };
@@ -121,6 +131,7 @@ const styles = StyleSheet.create({
     marginBottom: -13,
     width: 280,
     height: 40,
+    fontFamily: "robotoRegular",
   },
   drawerOptionBack: {
     marginVertical: 1,
