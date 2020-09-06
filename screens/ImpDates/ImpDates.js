@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     paddingTop: 3,
     letterSpacing: 2,
     fontSize: 16,
+    fontFamily: "monRegular",
   },
 });
 

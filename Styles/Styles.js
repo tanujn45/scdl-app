@@ -42,6 +42,7 @@ const mainStyles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 20,
+    fontFamily: "monRegular",
   },
   cardLMContainer: {
     flexDirection: "row",
@@ -51,6 +52,7 @@ const mainStyles = StyleSheet.create({
     color: Colors.grey,
     fontSize: 15,
     paddingRight: 3,
+    fontFamily: "monRegular",
   },
   buttonContainer: {
     paddingVertical: 15,
