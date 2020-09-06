@@ -3,8 +3,13 @@ import { StyleSheet, View } from "react-native";
 import { Card, Text, Avatar, Button } from "@ui-kitten/components";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
+import { RFValue, RFPercentage } from "react-native-responsive-fontsize";
 
-const Landing = () => {
+const Landing = ({ navigation }) => {
+  const homeNavigation = () => {
+    navigation.navigate("Home");
+  };
+
   return (
     <View style={styles.screen}>
       <View style={styles.topContainer}>
@@ -21,7 +26,11 @@ const Landing = () => {
         </View>
       </View>
       <View style={styles.bottomContainer}>
-        <Button style={mainStyles.buttonContainer} size="large">
+        <Button
+          style={mainStyles.buttonContainer}
+          size="large"
+          onPress={homeNavigation}
+        >
           <Text style={mainStyles.buttonText}>Enter to explore</Text>
         </Button>
       </View>
@@ -46,9 +55,8 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: "center",
-    fontSize: 44,
+    fontSize: RFPercentage(4),
     textTransform: "uppercase",
-    fontWeight: "700",
     color: Colors.primary,
     fontFamily: "monRegular",
   },
