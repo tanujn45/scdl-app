@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -15,7 +15,6 @@ const Stack = createStackNavigator();
 const CustomDrawerContent = (props) => {
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
       <DrawerItem label="Home" />
       <DrawerItem label="Home" />
       <DrawerItem label="Home" />
