@@ -40,13 +40,9 @@ const Program = ({ navigation }) => {
   ]);
 
   const ProgramsItem = (item) => {
-    const goToProgramDetails = () => {
-      navigation.navigate("ProgramDetails");
-    };
-
     return (
       <TouchableHighlight
-        onPress={goToProgramDetails}
+        onPress={() => navigation.navigate("ProgramDetails", item)}
         style={mainStyles.cardTouchContainer}
       >
         <View

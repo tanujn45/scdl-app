@@ -8,13 +8,25 @@ import {
 import Programs from "../screens/Programs/Programs";
 import { createStackNavigator } from "@react-navigation/stack";
 import ProgramDetails from "../screens/Programs/ProgramDetails";
+import Colors from "../Constants/Colors";
 
 const Stack = createStackNavigator();
 
 export default () => {
   return (
     <Stack.Navigator
-      // screenOptions={{ headerShown: false }}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: Colors.background,
+        },
+        headerBackTitleStyle: {
+          color: "black",
+        },
+        headerTitleStyle: {
+          fontSize: 22,
+          fontWeight: "bold",
+        },
+      }}
       initialRouteName="Programs"
     >
       <Stack.Screen
