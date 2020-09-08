@@ -59,7 +59,6 @@ const ImpDates = ({ navigation }) => {
 
   return (
     <View style={mainStyles.screen}>
-      <Header navigation={navigation} headingTitle="Important Dates" />
       <View style={styles.flatListContainer}>
         <FlatList
           data={data}
@@ -71,9 +70,7 @@ const ImpDates = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  flatListContainer: {
-    marginTop: 10,
-  },
+  flatListContainer: {},
   date: {
     color: "#fff",
     fontSize: 28,

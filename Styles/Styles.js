@@ -4,7 +4,7 @@ import Colors from "../Constants/Colors";
 const mainStyles = StyleSheet.create({
   screen: {
     backgroundColor: Colors.background,
-    paddingTop: 40,
+    paddingTop: 15,
   },
   cardTouchContainer: {
     height: 100,

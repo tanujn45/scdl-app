@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, Dimensions } from "react-native";
 import { AppLoading } from "expo";
 import Landing from "./screens/Landing/Landing";
 import Drawer from "./Navigators/Drawer";
+import Header from "./Components/Header";
 
 import {
   useFonts,
@@ -27,8 +27,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Landing"
         screenOptions={{ headerShown: false }}
+        initialRouteName="Landing"
       >
         <Stack.Screen name="Landing" component={Landing} />
         <Stack.Screen name="Drawer" component={Drawer} />
@@ -36,5 +36,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({});

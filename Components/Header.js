@@ -1,22 +1,24 @@
 import React from "react";
 import { View, TouchableHighlight, Text, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { DrawerActions } from "@react-navigation/native";
 
-const Header = (props) => {
-  const openDrawer = () => {
-    props.navigation.openDrawer();
-  };
+const Header = ({ navigation }) => {
+  console.log(navigation);
+  // const openDrawer = () => {
+  //   props.navigation.openDrawer();
+  // };
 
   return (
     <View style={styles.headerContainer}>
       <TouchableHighlight
         style={styles.headerTouchContainer}
         underlayColor="#DDDDDD"
-        onPress={openDrawer}
+        onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
       >
         <Feather name="menu" size={22} />
       </TouchableHighlight>
-      <Text style={styles.heading}>{props.headingTitle}</Text>
+      {/* <Text style={styles.heading}>{props.headingTitle}</Text> */}
     </View>
   );
 };

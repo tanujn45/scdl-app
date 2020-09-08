@@ -69,7 +69,6 @@ const Program = ({ navigation }) => {
 
   return (
     <View style={mainStyles.screen}>
-      <Header navigation={navigation} headingTitle="Programs" />
       <View style={styles.flatListContainer}>
         <FlatList
           data={data}
@@ -82,7 +81,7 @@ const Program = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   flatListContainer: {
-    marginTop: 10,
+    // marginTop: 10,
   },
 });
 

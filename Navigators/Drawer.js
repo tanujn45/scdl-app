@@ -14,6 +14,7 @@ import { mainStyles } from "../Styles/Styles";
 import Colors from "../Constants/Colors";
 import { Feather } from "@expo/vector-icons";
 import ProgramsNavigator from "./ProgramsNavigator";
+import Header from "../Components/Header";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -72,12 +73,53 @@ const CustomDrawerContent = (props) => {
 };
 
 const Screens = ({ navigation }) => {
+  const setHeaderLeft = {};
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="ProgramNavigator" component={ProgramsNavigator} />
-      <Stack.Screen name="ImpDates" component={ImpDates} />
-      <Stack.Screen name="Contact" component={Contact} />
+    <Stack.Navigator
+      mode="screen"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: Colors.background,
+        },
+        headerTintColor: "black",
+        headerTitleStyle: {
+          fontFamily: "robotoRegular",
+          fontSize: 20,
+        },
+      }}
+    >
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={({ navigation }) => ({
+          title: "Home",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
+      <Stack.Screen
+        name="ProgramNavigator"
+        component={Programs}
+        options={({ navigation }) => ({
+          title: "Programs",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
+      <Stack.Screen
+        name="ImpDates"
+        component={ImpDates}
+        options={({ navigation }) => ({
+          title: "Important Dates",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
+      <Stack.Screen
+        name="Contact"
+        component={Contact}
+        options={({ navigation }) => ({
+          title: "Contact Us",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
     </Stack.Navigator>
   );
 };

@@ -10,7 +10,6 @@ const ProgramDetails = ({ navigation }) => {
   const [data, setData] = useState([]);
   return (
     <View style={mainStyles.screen}>
-      <Header navigation={navigation} headingTitle="Management" />
       <View></View>
       <View style={mainStyles.cardContainer}></View>
     </View>
