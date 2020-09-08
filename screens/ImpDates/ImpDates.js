@@ -59,6 +59,7 @@ const ImpDates = ({ navigation }) => {
 
   return (
     <View style={mainStyles.screen}>
+      <Header headingTitle="Important Dates" navigation={navigation} />
       <View style={styles.flatListContainer}>
         <FlatList
           data={data}

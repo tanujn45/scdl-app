@@ -9,6 +9,7 @@ import { Feather } from "@expo/vector-icons";
 const Contact = ({ navigation }) => {
   return (
     <View style={mainStyles.screen}>
+      <Header headingTitle="Contact Us" navigation={navigation} />
       <View
         style={[mainStyles.cardContainer, mainStyles.cardContainerSpecific]}
       >

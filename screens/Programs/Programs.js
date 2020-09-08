@@ -69,6 +69,7 @@ const Program = ({ navigation }) => {
 
   return (
     <View style={mainStyles.screen}>
+      <Header headingTitle="Programs" navigation={navigation} />
       <View style={styles.flatListContainer}>
         <FlatList
           data={data}

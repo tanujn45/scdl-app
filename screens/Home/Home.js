@@ -6,6 +6,7 @@ import Header from "../../Components/Header";
 const Home = ({ navigation }) => {
   return (
     <View style={mainStyles.screen}>
+      <Header headingTitle="Home" navigation={navigation} />
       <Text>Home Screen</Text>
     </View>
   );

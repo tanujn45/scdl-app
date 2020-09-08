@@ -30,7 +30,11 @@ export default function App() {
         screenOptions={{ headerShown: false }}
         initialRouteName="Landing"
       >
-        <Stack.Screen name="Landing" component={Landing} />
+        <Stack.Screen
+          name="Landing"
+          component={Landing}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="Drawer" component={Drawer} />
       </Stack.Navigator>
     </NavigationContainer>

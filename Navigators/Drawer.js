@@ -4,6 +4,7 @@ import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItem,
+  DrawerItemList,
 } from "@react-navigation/drawer";
 import Programs from "../screens/Programs/Programs";
 import Home from "../screens/Home/Home";
@@ -40,7 +41,7 @@ const CustomDrawerContent = (props) => {
           />
         </View>
       </View>
-      <DrawerItem
+      {/* <DrawerItem
         label="Home"
         onPress={() => props.navigation.navigate("Home")}
         labelStyle={styles.drawerOptionText}
@@ -49,7 +50,7 @@ const CustomDrawerContent = (props) => {
       <View style={styles.drawerBorder} />
       <DrawerItem
         label="Programs"
-        onPress={() => props.navigation.navigate("ProgramNavigator")}
+        onPress={() => props.navigation.navigate("ProgramsNavigator")}
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
@@ -67,28 +68,39 @@ const CustomDrawerContent = (props) => {
         labelStyle={styles.drawerOptionText}
         style={styles.drawerOptionBack}
       />
-      <View style={styles.drawerBorder} />
+      <View style={styles.drawerBorder} /> */}
+      <DrawerItemList {...props} />
     </DrawerContentScrollView>
   );
 };
 
-const Screens = ({ navigation }) => {
-  const setHeaderLeft = {};
+// const Screens = () => {
+//   const setHeaderLeft = {};
+//   return (
+//     <Stack.Navigator
+//       mode="screen"
+//       screenOptions={{
+//         headerStyle: {
+//           backgroundColor: Colors.background,
+//         },
+//         headerTintColor: "black",
+//         headerTitleStyle: {
+//           fontFamily: "robotoRegular",
+//           fontSize: 20,
+//         },
+//       }}
+//     ></Stack.Navigator>
+//   );
+// };
+
+export default () => {
   return (
-    <Stack.Navigator
-      mode="screen"
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: Colors.background,
-        },
-        headerTintColor: "black",
-        headerTitleStyle: {
-          fontFamily: "robotoRegular",
-          fontSize: 20,
-        },
-      }}
+    <Drawer.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName="Home"
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-      <Stack.Screen
+      <Drawer.Screen
         name="Home"
         component={Home}
         options={({ navigation }) => ({
@@ -96,15 +108,15 @@ const Screens = ({ navigation }) => {
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
-      <Stack.Screen
-        name="ProgramNavigator"
-        component={Programs}
+      <Drawer.Screen
+        name="ProgramsNavigator"
+        component={ProgramsNavigator}
         options={({ navigation }) => ({
           title: "Programs",
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
-      <Stack.Screen
+      <Drawer.Screen
         name="ImpDates"
         component={ImpDates}
         options={({ navigation }) => ({
@@ -112,7 +124,7 @@ const Screens = ({ navigation }) => {
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
-      <Stack.Screen
+      <Drawer.Screen
         name="Contact"
         component={Contact}
         options={({ navigation }) => ({
@@ -120,17 +132,7 @@ const Screens = ({ navigation }) => {
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
-    </Stack.Navigator>
-  );
-};
-
-export default () => {
-  return (
-    <Drawer.Navigator
-      initialRouteName="Home"
-      drawerContent={(props) => <CustomDrawerContent {...props} />}
-    >
-      <Drawer.Screen name="Screens" component={Screens} />
+      {/* <Drawer.Screen name="Screens" component={Screens} /> */}
     </Drawer.Navigator>
   );
 };
