@@ -1,14 +1,9 @@
 import React from "react";
-import { StyleSheet, View, TouchableHighlight, Image } from "react-native";
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItem,
-} from "@react-navigation/drawer";
-import Programs from "../screens/Programs/Programs";
 import { createStackNavigator } from "@react-navigation/stack";
-import ProgramDetails from "../screens/Programs/ProgramDetails";
 import Colors from "../Constants/Colors";
+import Programs from "../screens/Programs/Programs";
+import ProgramDetails from "../screens/Programs/ProgramDetails";
+import SubProgramDetails from "../screens/Programs/SubProgramDetails";
 
 const Stack = createStackNavigator();
 
@@ -34,11 +29,8 @@ export default () => {
         component={Programs}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="ProgramDetails"
-        component={ProgramDetails}
-        options={{ name: "Program Details" }}
-      />
+      <Stack.Screen name="ProgramDetails" component={ProgramDetails} />
+      <Stack.Screen name="SubProgramDetails" component={SubProgramDetails} />
     </Stack.Navigator>
   );
 };
