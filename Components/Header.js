@@ -1,7 +1,12 @@
 import React from "react";
-import { View, TouchableHighlight, Text, StyleSheet } from "react-native";
+import {
+  View,
+  TouchableHighlight,
+  Text,
+  StyleSheet,
+  Platform,
+} from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { DrawerActions } from "@react-navigation/native";
 
 const Header = (props) => {
   const openDrawer = () => {
@@ -24,7 +29,7 @@ const Header = (props) => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    marginTop: 10,
+    marginTop: Platform.OS === "ios" ? 25 : 10,
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
