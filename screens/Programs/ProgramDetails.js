@@ -5,11 +5,10 @@ import {
   Image,
   Text,
   TouchableHighlight,
+  FlatList,
 } from "react-native";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
-import { FlatList } from "react-native-gesture-handler";
-import _ from "lodash";
 
 const ProgramDetails = (props) => {
   const [prev, setPrev] = useState(props.route.params);
@@ -83,7 +82,7 @@ const ProgramDetails = (props) => {
         },
         {
           key: "13",
-          name: "Energy Management [Renewable Energy]",
+          name: "Energy Management",
           image: require("../../assets/programs/team.png"),
         },
       ],
@@ -171,12 +170,14 @@ const ProgramDetails = (props) => {
         </View>
         <FlatList
           horizontal={true}
-          data={[programs]}
-          renderItem={({ subItem }) => SubProgramsItem(subItem)}
+          data={_.values(programs)}
+          renderItem={({ subItem }) => console.log(subItem)}
         />
       </View>
     );
   };
+
+  function firstOrLast() {}
 
   // console.log(typeof data);
   return (
@@ -185,7 +186,7 @@ const ProgramDetails = (props) => {
         <FlatList
           data={data}
           renderItem={({ item }) => {
-            console.log(item);
+            let len = item.programs.length;
             return (
               <View>
                 <View style={styles.customHeaderContainer}>
@@ -194,16 +195,22 @@ const ProgramDetails = (props) => {
                 <FlatList
                   horizontal={true}
                   data={item.programs}
-                  renderItem={({ subItem }) => {
-                    console.log(subItem);
+                  renderItem={({ item, index }) => {
                     return (
                       <TouchableHighlight
                         onPress={() =>
-                          props.navigation.navigate(
-                            "SubProgramDetails",
-                            subItem
-                          )
+                          props.navigation.navigate("SubProgramDetails", item)
                         }
+                        style={[
+                          mainStyles.cardContainer,
+                          styles.cardContainer,
+                          index === 0
+                            ? { marginLeft: 20, marginRight: 10 }
+                            : { marginHorizontal: 10 },
+                          index === len - 1
+                            ? { marginLeft: 10, marginRight: 20 }
+                            : { marginHorizontal: 10 },
+                        ]}
                       >
                         <View
                           style={[
@@ -211,8 +218,11 @@ const ProgramDetails = (props) => {
                             styles.cardContainer,
                           ]}
                         >
-                          {/* <Image style={mainStyles.cardImage} source={item.image}></Image> */}
-                          <Text style={styles.cardTitle}>{subItem}</Text>
+                          <Image
+                            style={mainStyles.cardImage}
+                            source={item.image}
+                          ></Image>
+                          <Text style={styles.cardTitle}>{item.name}</Text>
                         </View>
                       </TouchableHighlight>
                     );
@@ -248,18 +258,19 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     height: 170,
+    flexDirection: "column",
     width: 170,
-    textAlign: "center",
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 20,
-    marginHorizontal: 10,
   },
   cardTitle: {
-    fontSize: 16,
+    fontSize: 14,
     textTransform: "uppercase",
     fontFamily: "robotoRegular",
+    fontWeight: "bold",
     marginTop: 20,
+    textAlign: "center",
   },
 });
 

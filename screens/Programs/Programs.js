@@ -43,6 +43,7 @@ const Program = ({ navigation }) => {
     return (
       <TouchableHighlight
         onPress={() => navigation.navigate("ProgramDetails", item)}
+        underlayColor="transparent"
         style={mainStyles.cardTouchContainer}
       >
         <View
