@@ -98,6 +98,16 @@ export default () => {
     <Drawer.Navigator
       screenOptions={{ headerShown: false }}
       initialRouteName="Home"
+      drawerContentOptions={{
+        activeTintColor: "black",
+        activeBackgroundColor: Colors.background,
+        labelStyle: {
+          fontSize: 17,
+          fontFamily: "robotoRegular",
+          textTransform: "uppercase",
+          letterSpacing: 0.7,
+        },
+      }}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
       <Drawer.Screen
