@@ -9,6 +9,7 @@ import {
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import { FlatList } from "react-native-gesture-handler";
+import _ from "lodash";
 
 const ProgramDetails = (props) => {
   const [prev, setPrev] = useState(props.route.params);
@@ -21,54 +22,67 @@ const ProgramDetails = (props) => {
       title: "Post Graduation Diploma",
       programs: [
         {
+          key: "1",
           name: "Business Administration",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "2",
           name: "International Business",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "3",
           name: "Banking and Financial Services",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "4",
           name: "Human Resource Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "5",
           name: "Insurance Business Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "6",
           name: "Retail Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "7",
           name: "Customer Relationship Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "8",
           name: "Supply Chain Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "9",
           name: "Export and Import Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "10",
           name: "Business and Corporate Laws",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "11",
           name: "Personnel & HRM [LL]",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "12",
           name: "Project Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "13",
           name: "Energy Management [Renewable Energy]",
           image: require("../../assets/programs/team.png"),
         },
@@ -79,22 +93,27 @@ const ProgramDetails = (props) => {
       title: "Post Graduation Certificate",
       programs: [
         {
+          key: "1",
           name: "Entrepreneurship Development",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "2",
           name: "Event Management",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "3",
           name: "Cyber Laws",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "4",
           name: "Taxation Laws",
           image: require("../../assets/programs/team.png"),
         },
         {
+          key: "5",
           name: "Management Accounting",
           image: require("../../assets/programs/team.png"),
         },
@@ -130,19 +149,21 @@ const ProgramDetails = (props) => {
   //     },
 
   const SubProgramsItem = (item) => {
+    console.log(item);
     return (
       <TouchableHighlight
         onPress={() => props.navigation.navigate("SubProgramDetails", item)}
       >
         <View style={[mainStyles.cardContainer, styles.cardContainer]}>
           {/* <Image style={mainStyles.cardImage} source={item.image}></Image> */}
-          <Text style={styles.cardTitle}>tanuj</Text>
+          <Text style={styles.cardTitle}></Text>
         </View>
       </TouchableHighlight>
     );
   };
 
-  const ProgramsItem = (item) => {
+  const ProgramsItem = async (item) => {
+    let programs = await item.programs;
     return (
       <View>
         <View style={styles.customHeaderContainer}>
@@ -150,17 +171,57 @@ const ProgramDetails = (props) => {
         </View>
         <FlatList
           horizontal={true}
-          data={item.programs}
+          data={[programs]}
           renderItem={({ subItem }) => SubProgramsItem(subItem)}
         />
       </View>
     );
   };
 
+  // console.log(typeof data);
   return (
     <View style={mainStyles.screen}>
       <View>
-        <FlatList data={data} renderItem={({ item }) => ProgramsItem(item)} />
+        <FlatList
+          data={data}
+          renderItem={({ item }) => {
+            console.log(item);
+            return (
+              <View>
+                <View style={styles.customHeaderContainer}>
+                  <Text style={styles.customHeaderTitle}>{item.title}</Text>
+                </View>
+                <FlatList
+                  horizontal={true}
+                  data={item.programs}
+                  renderItem={({ subItem }) => {
+                    console.log(subItem);
+                    return (
+                      <TouchableHighlight
+                        onPress={() =>
+                          props.navigation.navigate(
+                            "SubProgramDetails",
+                            subItem
+                          )
+                        }
+                      >
+                        <View
+                          style={[
+                            mainStyles.cardContainer,
+                            styles.cardContainer,
+                          ]}
+                        >
+                          {/* <Image style={mainStyles.cardImage} source={item.image}></Image> */}
+                          <Text style={styles.cardTitle}>{subItem}</Text>
+                        </View>
+                      </TouchableHighlight>
+                    );
+                  }}
+                />
+              </View>
+            );
+          }}
+        />
       </View>
     </View>
   );
@@ -173,7 +234,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.secondary,
     width: "85%",
     height: 55,
-    borderTopLeftRadius: 25,
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
     alignItems: "flex-end",
     justifyContent: "center",
   },
