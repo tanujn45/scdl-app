@@ -181,7 +181,7 @@ const ProgramDetails = (props) => {
 
   // console.log(typeof data);
   return (
-    <View style={mainStyles.screen}>
+    <View style={[mainStyles.screen, { flex: 1 }]}>
       <View>
         <FlatList
           data={data}
@@ -193,6 +193,7 @@ const ProgramDetails = (props) => {
                   <Text style={styles.customHeaderTitle}>{item.title}</Text>
                 </View>
                 <FlatList
+                  style={styles.flatListContainer}
                   horizontal={true}
                   data={item.programs}
                   renderItem={({ item, index }) => {
@@ -238,6 +239,9 @@ const ProgramDetails = (props) => {
 };
 
 const styles = StyleSheet.create({
+  flatListContainer: {
+    flex: 1,
+  },
   customHeaderContainer: {
     alignSelf: "flex-end",
     marginTop: 20,
