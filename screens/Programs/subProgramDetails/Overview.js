@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontFamily: 'robotoBold',
     fontSize: 30,
     marginHorizontal: 10,
-color: Colors.secondary,
+    color: Colors.secondary,
   }
 });
 
