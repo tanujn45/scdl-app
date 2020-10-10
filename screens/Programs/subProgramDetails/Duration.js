@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from "react-native";
 const Duration = (props) => {
   return (
     <View>
-      <Text>Duration</Text>
+      <Text>Tanuj Namdeo Rocks</Text>
     </View>
   );
 };
