@@ -12,7 +12,7 @@ const mainStyles = StyleSheet.create({
     alignSelf: "center",
     marginVertical: 10,
     borderRadius: 10,
-    elevation: 5,
+    // elevation: 5,
     overflow: "hidden",
   },
   cardContainer: {
@@ -20,7 +20,7 @@ const mainStyles = StyleSheet.create({
     // shadowOffset: { width: 0, height: 2 },
     // shadowRadius: 6,
     // shadowOpacity: 0.26,
-    // elevation: 10,
+    // elevation: 5,
     backgroundColor: "#fff",
     borderRadius: 20,
   },

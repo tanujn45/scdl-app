@@ -148,7 +148,7 @@ const ProgramDetails = (props) => {
   //     },
 
   const SubProgramsItem = (item) => {
-    console.log(item);
+    // console.log(item);
     return (
       <TouchableHighlight
         onPress={() => props.navigation.navigate("SubProgramDetails", item)}
@@ -161,25 +161,6 @@ const ProgramDetails = (props) => {
     );
   };
 
-  const ProgramsItem = async (item) => {
-    let programs = await item.programs;
-    return (
-      <View>
-        <View style={styles.customHeaderContainer}>
-          <Text style={styles.customHeaderTitle}>{item.title}</Text>
-        </View>
-        <FlatList
-          horizontal={true}
-          data={_.values(programs)}
-          renderItem={({ subItem }) => console.log(subItem)}
-        />
-      </View>
-    );
-  };
-
-  function firstOrLast() {}
-
-  // console.log(typeof data);
   return (
     <View style={[mainStyles.screen, { flex: 1 }]}>
       <View>

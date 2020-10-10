@@ -19,7 +19,6 @@ import ProgramStruture from "./subProgramDetails/ProgramStruture";
 const SubProgramDetails = (props) => {
   const [prev, setPrev] = useState(props.route.params);
   props.navigation.setOptions({ title: prev.name });
-  console.log(props);
   const [data, setData] = useState([
     {
       key: "1",
