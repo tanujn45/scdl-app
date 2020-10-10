@@ -42,7 +42,7 @@ const mainStyles = StyleSheet.create({
     backgroundColor: Colors.secondary,
   },
   cardRightContainer: {
-    width: "95%",
+    width: "68%",
     justifyContent: "center",
     paddingLeft: 15,
   },
