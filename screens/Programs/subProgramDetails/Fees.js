@@ -21,7 +21,7 @@ const Fees = (props) => {
             name="star"
             size={15}
             color="black"
-            style={{ marginTop: 10 }}
+            style={{ marginTop: 2 }}
           />
           <Text style={styles.point}>
             For Indian Residents (General / Defence Personnel / Paramilitary /
@@ -33,7 +33,7 @@ const Fees = (props) => {
             name="star"
             size={15}
             color="black"
-            style={{ marginTop: 10 }}
+            style={{ marginTop: 2 }}
           />
           <Text style={styles.point}>
             International / SAARC: US $100 OR Rs. 7,200/-
@@ -65,7 +65,7 @@ const Fees = (props) => {
             name="star"
             size={15}
             color="black"
-            style={{ marginTop: 10 }}
+            style={{ marginTop: 2 }}
           />
           <Text style={styles.point}>
             Option 2 - One Time Payment:- Student has to pay the full course
@@ -82,7 +82,7 @@ const Fees = (props) => {
             name="star"
             size={15}
             color="black"
-            style={{ marginTop: 10 }}
+            style={{ marginTop: 2 }}
           />
           <Text style={styles.point}>
             Participants are required to pay exam fees per exam per attempt
@@ -100,7 +100,7 @@ const Fees = (props) => {
             name="star"
             size={15}
             color="black"
-            style={{ marginTop: 10 }}
+            style={{ marginTop: 2 }}
           />
           <Text style={styles.point}>
             Payment via Online: this can be done through payment gateway.
@@ -111,7 +111,7 @@ const Fees = (props) => {
             name="star"
             size={15}
             color="black"
-            style={{ marginTop: 10 }}
+            style={{ marginTop: 2 }}
           />
           <Text style={styles.point}>
             Payment via DD: this can be submitted at SCDL Pune campus. The

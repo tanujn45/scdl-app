@@ -36,7 +36,7 @@ const Duration = (props) => {
                 name="star"
                 size={15}
                 color="black"
-                style={{ marginTop: 10 }}
+                style={{ marginTop: 2 }}
               />
               <Text style={styles.point}>{item.point}</Text>
             </View>
@@ -54,7 +54,7 @@ const Duration = (props) => {
                   name="star"
                   size={15}
                   color="black"
-                  style={{ marginTop: 10 }}
+                  style={{ marginTop: 2 }}
                 />
                 <Text style={styles.point}>{item.point}</Text>
               </View>
