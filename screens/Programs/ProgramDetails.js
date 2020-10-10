@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textTransform: "uppercase",
     fontFamily: "robotoRegular",
-    fontWeight: "bold",
+    width: "80%",
     marginTop: 20,
     textAlign: "center",
   },
