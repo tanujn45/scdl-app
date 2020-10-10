@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   customHeaderContainer: {
     alignSelf: "flex-end",
     marginTop: 20,
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.primary,
     width: "85%",
     height: 55,
     borderTopLeftRadius: 25,
