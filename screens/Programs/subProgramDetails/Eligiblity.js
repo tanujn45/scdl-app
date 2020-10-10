@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, FlatList } from "react-native";
+import { StyleSheet, View, Text, FlatList, ScrollView } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 const data = [
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 15,
     width: "90%",
+    textAlign: "justify",
   },
 });
 

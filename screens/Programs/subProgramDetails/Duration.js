@@ -1,6 +1,6 @@
 import React from "react";
 import { Feather } from "@expo/vector-icons";
-import { StyleSheet, View, Text, FlatList } from "react-native";
+import { StyleSheet, View, Text, FlatList, ScrollView } from "react-native";
 
 const Duration = (props) => {
   const duration = [
@@ -44,7 +44,7 @@ const Duration = (props) => {
         }}
       ></FlatList>
       <View style={styles.exitContent}>
-        <Text style={styles.exit}>Exit Policy :</Text>
+        <Text style={styles.exit}>Exit Policy:</Text>
         <FlatList
           data={exit}
           renderItem={({ item }) => {
@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 15,
     width: "90%",
+    textAlign: "justify",
   },
   exitContent: {
     marginTop: 20,
