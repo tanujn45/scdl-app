@@ -10,11 +10,13 @@ import Programs from "../screens/Programs/Programs";
 import Home from "../screens/Home/Home";
 import ImpDates from "../screens/ImpDates/ImpDates";
 import Contact from "../screens/Contact/Contact";
+import AboutUs from "../screens/AboutUs/AboutUs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { mainStyles } from "../Styles/Styles";
 import Colors from "../Constants/Colors";
 import { Feather } from "@expo/vector-icons";
 import ProgramsNavigator from "./ProgramsNavigator";
+import AboutUsNavigator from "./AboutUsNavigator";
 import Header from "../Components/Header";
 
 const Drawer = createDrawerNavigator();
@@ -131,6 +133,14 @@ export default () => {
         component={ImpDates}
         options={({ navigation }) => ({
           title: "Important Dates",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
+       <Drawer.Screen
+        name="AboutUsNavigator"
+        component={AboutUsNavigator}
+        options={({ navigation }) => ({
+          title: "About Us",
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
