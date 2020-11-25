@@ -59,14 +59,14 @@ const AboutUs = ({ navigation }) => {
         "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
     },
     {
-      key: "7",
+      key: "8",
       image: require("../../assets/programs/user.png"),
       title: "SCDL Advantage",
       about:
         "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
     },
     {
-      key: "8",
+      key: "9",
       image: require("../../assets/programs/user.png"),
       title: "Recognition",
       about:

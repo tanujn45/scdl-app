@@ -63,7 +63,7 @@ const ImpDates = ({ navigation }) => {
 
   const ImpDatesItem = (item) => {
     return (
-      <TouchableHighlight style={styles.cardTouchContainer}>
+      <TouchableHighlight style={styles.cardTouchContainer}>p
         <View style={[mainStyles.cardContainer, styles.cardContainerSpecific]}>
           <View style={mainStyles.cardLeftContainer}>
             <Text style={styles.date}>{item.date.slice(0, 2)}</Text>

@@ -10,13 +10,16 @@ import {
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import AboutSCDL from "../AboutUs/AboutUsDetails/AboutSCDL";
+import Director from "../AboutUs/AboutUsDetails/Director";
 
 const AboutUsDetails = (props) => {
   props.navigation.setOptions({ title: props.route.params.title });
   // console.log(test);
   return (
-    <View><AboutSCDL /></View>
-  )
-}
+    <View>
+      <Director />
+    </View>
+  );
+};
 
 export default AboutUsDetails;
