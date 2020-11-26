@@ -11,15 +11,18 @@ import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import AboutSCDL from "../AboutUs/AboutUsDetails/AboutSCDL";
 import Director from "../AboutUs/AboutUsDetails/Director";
-import RankingAwards from "../AboutUs/AboutUsDetails/RankingAwards";
+import ScdlAdvantage from "./AboutUsDetails/ScdlAdvantage";
+import NewsAndEvents from "./AboutUsDetails/NewsAndEvents";
 
 const AboutUsDetails = (props) => {
   props.navigation.setOptions({ title: props.route.params.title });
   // console.log(test);
   return (
-    <View>
-      <RankingAwards />
-    </View>
+    // <View>
+    //   <Director />
+    //   <ScdlAdvantage />
+    // </View>
+    <AboutSCDL />
   );
 };
 

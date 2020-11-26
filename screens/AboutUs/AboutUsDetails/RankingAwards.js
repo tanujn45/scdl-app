@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import { mainStyles } from "../../../Styles/Styles";
 import Colors from "../../../Constants/Colors";
-import { create } from "lodash";
 
 const RankingAwards = () => {
   return (
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
   },
   card: {
     marginHorizontal: 20,
-    marginVertical: 20,
+    marginVertical: 15,
     padding: 5,
     paddingTop: 10,
   },

@@ -10,7 +10,7 @@ import Programs from "../screens/Programs/Programs";
 import Home from "../screens/Home/Home";
 import ImpDates from "../screens/ImpDates/ImpDates";
 import Contact from "../screens/Contact/Contact";
-import AboutUs from "../screens/AboutUs/AboutUs";
+import Testimonial from "../screens/Testimonial/Testimonial";
 import { createStackNavigator } from "@react-navigation/stack";
 import { mainStyles } from "../Styles/Styles";
 import Colors from "../Constants/Colors";
@@ -136,11 +136,19 @@ export default () => {
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
-       <Drawer.Screen
+      <Drawer.Screen
         name="AboutUsNavigator"
         component={AboutUsNavigator}
         options={({ navigation }) => ({
           title: "About Us",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
+      <Drawer.Screen
+        name="Testimonial"
+        component={Testimonial}
+        options={({ navigation }) => ({
+          title: "Testimonials",
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />

@@ -120,35 +120,7 @@ const ProgramDetails = (props) => {
     },
   ]);
 
-  // {
-  //       key: "3",
-  //       title: "Certificate Program",
-  //       programs: [
-  //         {
-  //           name: "Building an Online Business",
-  //           image: require("../../assets/programs/team.png"),
-  //         },
-  //         {
-  //           name: "Disaster Management",
-  //           image: require("../../assets/programs/team.png"),
-  //         },
-  //         {
-  //           name: "IPR and Patent Law",
-  //           image: require("../../assets/programs/team.png"),
-  //         },
-  //         {
-  //           name: "Virtual Workplace Management",
-  //           image: require("../../assets/programs/team.png"),
-  //         },
-  //         {
-  //           name: "Single Courses",
-  //           image: require("../../assets/programs/team.png"),
-  //         },
-  //       ],
-  //     },
-
   const SubProgramsItem = (item) => {
-    // console.log(item);
     return (
       <TouchableHighlight
         onPress={() => props.navigation.navigate("SubProgramDetails", item)}

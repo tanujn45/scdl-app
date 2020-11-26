@@ -4,8 +4,6 @@ import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import Header from "../../Components/Header";
 import { FlatList, TouchableHighlight } from "react-native-gesture-handler";
-import { Feather } from "@expo/vector-icons";
-import { wrap } from "lodash";
 
 const ImpDates = ({ navigation }) => {
   const [data, setData] = useState([
