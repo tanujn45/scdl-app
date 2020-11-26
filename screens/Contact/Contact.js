@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginVertical: 10,
     borderRadius: 10,
-    elevation: 5,
+    // elevation: 5,
     overflow: "hidden",
   },
   contactContainer: {
