@@ -13,71 +13,38 @@ const AboutUs = ({ navigation }) => {
       key: "1",
       image: require("../../assets/programs/team.png"),
       title: "About SCDL",
-      about:
-        'Management (or managing) is the administration of an organization, whether it is a business, a not-for-profit organization, or government body. Management includes the activities of setting the strategy of an organization and coordinating the efforts of its employees (or of volunteers) to accomplish its objectives through the application of available resources, such as financial, natural, technological, and human resources. The term "management" may also refer to those people who manage an organization - individually: managers.',
     },
     {
       key: "2",
-      image: require("../../assets/programs/graphic-design.png"),
-      title: "Mission & Vision",
-      about:
-        "A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process, or the result of that plan or specification in the form of a prototype, product or process. The verb to design expresses the process of developing a design. In some cases, the direct construction of an object without an explicit prior plan (such as in craftwork, some engineering, coding, and graphic design) may also be considered to be a design activity. The design usually has to satisfy certain goals and constraints, may take into account aesthetic, functional, economic, or socio-political considerations, and is expected to interact with a certain environment. Major examples of designs include architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns.",
+      image: require("../../assets/programs/user.png"),
+      title: "Director's Message",
     },
     {
       key: "3",
-      image: require("../../assets/programs/data.png"),
-      title: "President's Message",
-      about:
-        "Information technology (IT) is the use of computers to store, retrieve, transmit, and manipulate data[1] or information. IT is typically used within the context of business operations as opposed to personal or entertainment technologies.[2] IT is considered to be a subset of information and communications technology (ICT). An information technology system (IT system) is generally an information system, a communications system or, more specifically speaking, a computer system – including all hardware, software and peripheral equipment – operated by a limited group of users.",
+      image: require("../../assets/programs/user.png"),
+      title: "Rankings and Awards",
     },
     {
       key: "4",
       image: require("../../assets/programs/user.png"),
-      title: "Director's Message",
-      about:
-        "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
+      title: "SCDL Advantage",
     },
     {
       key: "5",
       image: require("../../assets/programs/user.png"),
-      title: "Rankings and Awards",
-      about:
-        "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
+      title: "News and Events",
     },
     {
       key: "6",
       image: require("../../assets/programs/user.png"),
-      title: "Symbiosis and Group",
-      about:
-        "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
-    },
-    {
-      key: "7",
-      image: require("../../assets/programs/user.png"),
-      title: "SCDL Advantage",
-      about:
-        "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
-    },
-    {
-      key: "8",
-      image: require("../../assets/programs/user.png"),
-      title: "SCDL Advantage",
-      about:
-        "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
-    },
-    {
-      key: "9",
-      image: require("../../assets/programs/user.png"),
       title: "Recognition",
-      about:
-        "Humanities are academic disciplines that study aspects of human society and culture. In the Renaissance, the term contrasted with divinity and referred to what is now called classics, the main area of secular study in universities at the time. Today, the humanities are more frequently contrasted with natural, and sometimes social sciences, as well as professional training.",
     },
   ]);
 
   const aboutUsItems = (item) => {
     return (
       <TouchableHighlight
-        onPress={() => navigation.navigate('AboutUsDetails', item)}
+        onPress={() => navigation.navigate("AboutUsDetails", item)}
         underlayColor="transparent"
         style={mainStyles.cardTouchContainer}
       >
