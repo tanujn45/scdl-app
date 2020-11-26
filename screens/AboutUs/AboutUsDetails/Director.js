@@ -16,13 +16,16 @@ const Director = () => {
   return (
     <ScrollView>
       <View>
-        <Image></Image>
-        <Text>Dr. Swati. S. Mujumdar</Text>
-        <Text>
+        <Image
+          style={styles.img}
+          source={require("../../../assets/img/directors-img.jpg")}
+        ></Image>
+        <Text style={styles.heading}>Dr. Swati. S. Mujumdar</Text>
+        <Text style={styles.paragraph}>
           Principal Director, Symbiosis Open Education Society Director,
           Symbiosis Centre for Distance Learning
         </Text>
-        <Text>
+        <Text style={styles.paragraph}>
           Global boundaries are vanishing, merging people of diverse cultures,
           nationalities and age groups. Education is emerging as the most
           powerful platform in the ' boundary less' world. Distance learning
@@ -31,7 +34,7 @@ const Director = () => {
           Centre for Distance Learning (SCDL) offers a chance to enhance your
           career and life through the medium of quality education.
         </Text>
-        <Text>
+        <Text style={styles.paragraph}>
           Symbiosis Centre for Distance Learning (SCDL) has pioneered in India
           interactive e-learning content in the curriculum as a supplementary
           learning methodology, in order to improve the understanding of
@@ -41,14 +44,14 @@ const Director = () => {
           anytime and to provide ultimate convenience, ease and flexibility to
           our students.
         </Text>
-        <Text>
+        <Text style={styles.paragraph}>
           The Corporate Business Administration program has also gained
           tremendous popularity and SCDL is now an education provider to leading
           companies in India, such as IBM, Cognizant, Infosys, Wipro, Ranbaxy,
           Collabera, Aditya Birla, Bharti Retail Pvt. Ltd., Wall-mart, Vodafone,
           Cipla, etc.
         </Text>
-        <Text>
+        <Text style={styles.paragraph}>
           SCDL has been invited by foreign universities for collaboration; a
           mark of our excellent quality education. I welcome each one of you to
           our 'Global Campus' where latest technology, innovative teaching
@@ -59,5 +62,28 @@ const Director = () => {
     </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  heading: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginLeft: 15,
+    marginBottom: 10,
+  },
+  img: {
+    borderColor: Colors.primary,
+    borderWidth: 4,
+    borderRadius: 40,
+    display: "flex",
+    alignSelf: "center",
+    marginVertical: 20,
+  },
+  paragraph: {
+    marginHorizontal: 15,
+    width: "90%",
+    textAlign: "justify",
+    marginBottom: 20,
+  },
+});
 
 export default Director;
