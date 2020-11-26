@@ -28,7 +28,7 @@ export default {
   accordionBorderColor: "#d3d3d3",
 
   // ActionSheet
-  elevation: 4,
+  // elevation: 4,
   containerTouchableBackgroundColor: "rgba(0,0,0,0.4)",
   innerTouchableBackgroundColor: "#fff",
   listItemHeight: 50,
