@@ -10,25 +10,25 @@ const AboutUs = ({ navigation }) => {
   const [data, setData] = useState([
     {
       key: "1",
-      image: require("../../assets/programs/team.png"),
+      image: require("../../assets/icons/programs.png"),
       title: "About SCDL",
       name: "AboutSCDL",
     },
     {
       key: "2",
-      image: require("../../assets/programs/user.png"),
+      image: require("../../assets/icons/director.png"),
       title: "Director's Message",
       name: "Director",
     },
     {
       key: "3",
-      image: require("../../assets/programs/user.png"),
+      image: require("../../assets/icons/rankawards.png"),
       title: "Rankings and Awards",
       name: "RankingAwards",
     },
     {
       key: "4",
-      image: require("../../assets/programs/user.png"),
+      image: require("../../assets/icons/scdladvantage.png"),
       title: "SCDL Advantage",
       name: "ScdlAdvantage",
     },
