@@ -5,7 +5,6 @@ import Colors from "../../Constants/Colors";
 import Header from "../../Components/Header";
 import { FlatList, TouchableHighlight } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
-import AboutUsDetails from "../AboutUs/AboutUsDetails";
 
 const AboutUs = ({ navigation }) => {
   const [data, setData] = useState([
@@ -13,38 +12,38 @@ const AboutUs = ({ navigation }) => {
       key: "1",
       image: require("../../assets/programs/team.png"),
       title: "About SCDL",
+      name: "AboutSCDL",
     },
     {
       key: "2",
       image: require("../../assets/programs/user.png"),
       title: "Director's Message",
+      name: "Director",
     },
     {
       key: "3",
       image: require("../../assets/programs/user.png"),
       title: "Rankings and Awards",
+      name: "RankingAwards",
     },
     {
       key: "4",
       image: require("../../assets/programs/user.png"),
       title: "SCDL Advantage",
+      name: "ScdlAdvantage",
     },
     {
       key: "5",
       image: require("../../assets/programs/user.png"),
       title: "News and Events",
-    },
-    {
-      key: "6",
-      image: require("../../assets/programs/user.png"),
-      title: "Recognition",
+      name: "NewsAndEvents",
     },
   ]);
 
   const aboutUsItems = (item) => {
     return (
       <TouchableHighlight
-        onPress={() => navigation.navigate("AboutUsDetails", item)}
+        onPress={() => navigation.navigate(item.name, item)}
         underlayColor="transparent"
         style={mainStyles.cardTouchContainer}
       >

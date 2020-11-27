@@ -14,9 +14,7 @@ import Conferences from "./NewsAndEvents/Conferences";
 import RankingAndAwards from "./NewsAndEvents/RankingAndAwards";
 
 const NewsAndEvents = (props) => {
-  //   const [prev, setPrev] = useState(props.route.params);
-  //   props.navigation.setOptions({ title: prev.name });
-
+  props.navigation.setOptions({ title: props.route.params.title });
   return (
     <StyleProvider style={getTheme(platform)}>
       <Container>

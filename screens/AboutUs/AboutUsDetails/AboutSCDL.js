@@ -12,7 +12,8 @@ import {
 import { mainStyles } from "../../../Styles/Styles";
 import Colors from "../../../Constants/Colors";
 
-const AboutSCDL = () => {
+const AboutSCDL = (props) => {
+  props.navigation.setOptions({ title: props.route.params.title });
   const paragraph = [
     {
       key: "1",
@@ -83,61 +84,62 @@ const AboutSCDL = () => {
     },
   ];
   return (
-    <ScrollView style={{ marginBottom: 30 }}>
-      <View>
-        <FlatList
-          data={paragraph}
-          renderItem={({ item }) => {
-            return (
-              <View style={styles.points}>
-                <Text style={styles.point}>{item.point}</Text>
-              </View>
-            );
-          }}
-        ></FlatList>
-        <View style={styles.aboutPointsContent}>
-          <FlatList
-            data={aboutPoints}
-            renderItem={({ item }) => {
-              return (
-                <View style={styles.points}>
-                  <Feather
-                    name="star"
-                    size={10}
-                    color="black"
-                    style={{ marginTop: 2, marginLeft: 5 }}
-                  />
-                  <Text style={styles.point}>{item.point}</Text>
-                </View>
-              );
-            }}
-          ></FlatList>
-        </View>
+    <ScrollView>
+      <View
+        style={{
+          width: "90%",
+          alignSelf: "center",
+          marginTop: 20,
+          marginBottom: 50,
+        }}
+      >
+        {paragraph.map((item) => (
+          <Text style={styles.subtitle}>{item.point}</Text>
+        ))}
+
+        {aboutPoints.map((item) => (
+          <View style={styles.points}>
+            <Feather
+              name="star"
+              size={15}
+              color="black"
+              style={{ marginTop: 2 }}
+            />
+            <Text style={styles.point}>{item.point}</Text>
+          </View>
+        ))}
       </View>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  content: {
-    width: "90%",
-    alignSelf: "center",
-    marginTop: 10,
+  heading: {
+    fontFamily: "robotoBold",
+    marginBottom: 5,
+    fontSize: 20,
+  },
+  paragraph: {
+    fontFamily: "robotoRegular",
+    lineHeight: 20,
+    fontSize: 15,
+    textAlign: "justify",
   },
   points: {
     flexDirection: "row",
-    marginTop: 10,
     alignItems: "flex-start",
   },
   point: {
-    marginLeft: 12,
+    marginLeft: 10,
     fontSize: 15,
     width: "90%",
     textAlign: "justify",
   },
-  aboutPoints: {
-    fontSize: 20,
-    fontWeight: "bold",
+  subtitle: {
+    fontSize: 15,
+    width: "100%",
+    marginBottom: 10,
+    textAlign: "justify",
   },
 });
 

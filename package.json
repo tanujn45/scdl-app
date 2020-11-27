@@ -30,6 +30,7 @@
     "react-native-responsive-fontsize": "^0.4.3",
     "react-native-safe-area-context": "~3.0.7",
     "react-native-screens": "~2.9.0",
+    "react-native-super-grid": "^4.0.3",
     "react-native-svg": "12.1.0",
     "react-native-tab-view": "^2.15.1",
     "react-native-table-component": "^1.2.1",

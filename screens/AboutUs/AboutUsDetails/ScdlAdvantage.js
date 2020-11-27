@@ -3,6 +3,7 @@ import { Feather } from "@expo/vector-icons";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 
 const ScdlAdvantage = (props) => {
+  props.navigation.setOptions({ title: props.route.params.title });
   return (
     <ScrollView>
       <View

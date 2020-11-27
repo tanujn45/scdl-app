@@ -11,6 +11,7 @@ import {
 } from "@expo-google-fonts/roboto";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import SignIn from "./screens/Auth/SignIn";
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,11 @@ export default function App() {
         <Stack.Screen
           name="Landing"
           component={Landing}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SignIn"
+          component={SignIn}
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Drawer" component={Drawer} />

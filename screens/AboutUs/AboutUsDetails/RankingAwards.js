@@ -12,7 +12,8 @@ import {
 import { mainStyles } from "../../../Styles/Styles";
 import Colors from "../../../Constants/Colors";
 
-const RankingAwards = () => {
+const RankingAwards = (props) => {
+  props.navigation.setOptions({ title: props.route.params.title });
   return (
     <ScrollView>
       <View>
