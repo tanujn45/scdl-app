@@ -41,7 +41,7 @@ const SignIn = ({ navigation }) => {
             <Label
               style={{
                 color: "#fff",
-                opacity: 0.5,
+                opacity: 0.9,
                 marginTop: Platform.OS === "ios" ? 0 : -8,
               }}
             >
@@ -54,7 +54,7 @@ const SignIn = ({ navigation }) => {
             <Label
               style={{
                 color: "#fff",
-                opacity: 0.5,
+                opacity: 0.9,
                 marginTop: Platform.OS === "ios" ? 0 : -8,
               }}
             >
@@ -67,16 +67,25 @@ const SignIn = ({ navigation }) => {
           style={[
             mainStyles.buttonContainer,
             {
-              //  paddingVertical: 5,
-              paddingHorizontal: 25,
+              paddingVertical: 13,
+              paddingHorizontal: 29,
               borderRadius: 10,
-              marginTop: 40,
+              marginTop: 35,
             },
           ]}
           onPress={() => navigation.navigate("Drawer")}
           underlayColor={Colors.background}
         >
           <Text style={mainStyles.buttonText}>Sign In</Text>
+        </TouchableHighlight>
+        <Text style={{ marginTop: 10, color: "white" }}>
+          Don't have an account?
+        </Text>
+        <TouchableHighlight
+          onPress={() => navigation.navigate("Drawer")}
+          underlayColor={Colors.primary}
+        >
+          <Text style={{ fontSize: 17, marginTop: 4 }}>Sign Up</Text>
         </TouchableHighlight>
       </View>
     </View>
