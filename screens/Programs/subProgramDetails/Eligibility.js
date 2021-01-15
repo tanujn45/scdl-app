@@ -2,29 +2,11 @@ import React from "react";
 import { StyleSheet, View, Text, FlatList, ScrollView } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-const data = [
-  {
-    key: "1",
-    point:
-      "Bachelor's degree holder / Graduate in any discipline from a recognised University.",
-  },
-  {
-    key: "2",
-    point:
-      "International / SAARC Graduate from a recognised / accredited University / Institution.",
-  },
-  {
-    key: "3",
-    point:
-      "Students who have appeared for final year of examination of their bachelor's degree program and are awaiting results can also apply, subject to successfully completing their bachelor's degree program / graduation within the time period specified by SCDL.",
-  },
-];
-
-const Eligiblity = (props) => {
+const Eligibility = (props) => {
   return (
     <View style={styles.content}>
       <FlatList
-        data={data}
+        data={props.content}
         renderItem={({ item }) => {
           return (
             <View style={styles.points}>
@@ -34,7 +16,7 @@ const Eligiblity = (props) => {
                 color="black"
                 style={{ marginTop: 2 }}
               />
-              <Text style={styles.point}>{item.point}</Text>
+              <Text style={styles.point}>{item.content}</Text>
             </View>
           );
         }}
@@ -62,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Eligiblity;
+export default Eligibility;

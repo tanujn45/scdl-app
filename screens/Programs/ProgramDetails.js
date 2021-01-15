@@ -12,113 +12,9 @@ import Colors from "../../Constants/Colors";
 
 const ProgramDetails = (props) => {
   const [prev, setPrev] = useState(props.route.params);
-  props.navigation.setOptions({ title: prev.title });
-
-  //Post Graduation Diploma
-  const [data, setData] = useState([
-    {
-      key: "1",
-      title: "Post Graduation Diploma",
-      programs: [
-        {
-          key: "1",
-          name: "Business Administration",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "2",
-          name: "International Business",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "3",
-          name: "Banking and Financial Services",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "4",
-          name: "Human Resource Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "5",
-          name: "Insurance Business Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "6",
-          name: "Retail Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "7",
-          name: "Customer Relationship Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "8",
-          name: "Supply Chain Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "9",
-          name: "Export and Import Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "10",
-          name: "Business and Corporate Laws",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "11",
-          name: "Personnel & HRM [LL]",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "12",
-          name: "Project Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "13",
-          name: "Energy Management",
-          image: require("../../assets/programs/team.png"),
-        },
-      ],
-    },
-    {
-      key: "2",
-      title: "Post Graduation Certificate",
-      programs: [
-        {
-          key: "1",
-          name: "Entrepreneurship Development",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "2",
-          name: "Event Management",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "3",
-          name: "Cyber Laws",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "4",
-          name: "Taxation Laws",
-          image: require("../../assets/programs/team.png"),
-        },
-        {
-          key: "5",
-          name: "Management Accounting",
-          image: require("../../assets/programs/team.png"),
-        },
-      ],
-    },
-  ]);
+  const { title, subDetails } = props.route.params;
+  console.log(subDetails);
+  props.navigation.setOptions({ title: title });
 
   const SubProgramsItem = (item) => {
     return (
@@ -137,18 +33,18 @@ const ProgramDetails = (props) => {
     <View style={[mainStyles.screen, { flex: 1 }]}>
       <View>
         <FlatList
-          data={data}
+          data={subDetails}
           renderItem={({ item }) => {
-            let len = item.programs.length;
+            let len = item.subCourses.length;
             return (
               <View>
                 <View style={styles.customHeaderContainer}>
-                  <Text style={styles.customHeaderTitle}>{item.title}</Text>
+                  <Text style={styles.customHeaderTitle}>{item.course}</Text>
                 </View>
                 <FlatList
                   style={styles.flatListContainer}
                   horizontal={true}
-                  data={item.programs}
+                  data={item.subCourses}
                   renderItem={({ item, index }) => {
                     return (
                       <TouchableHighlight
@@ -176,7 +72,7 @@ const ProgramDetails = (props) => {
                             style={mainStyles.cardImage}
                             source={item.image}
                           ></Image>
-                          <Text style={styles.cardTitle}>{item.name}</Text>
+                          <Text style={styles.cardTitle}>{item.subCourse}</Text>
                         </View>
                       </TouchableHighlight>
                     );
