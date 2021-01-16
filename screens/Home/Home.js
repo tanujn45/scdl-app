@@ -66,7 +66,7 @@ const Home = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   welcome: {
-    fontSize: 25,
+    fontSize: Platform.OS === "ios" ? 25 : 21,
     fontWeight: "bold",
     marginLeft: 25,
     marginTop: 20,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     marginTop: 10,
-    fontSize: 18,
+    fontSize: Platform.OS === "ios" ? 18 : 14,
     alignSelf: "center",
     // fontWeight: "bold",
   },

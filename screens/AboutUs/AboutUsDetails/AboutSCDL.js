@@ -131,12 +131,12 @@ const styles = StyleSheet.create({
   },
   point: {
     marginLeft: 10,
-    fontSize: 15,
+    fontSize: Platform.OS === "ios" ? 15 : 13,
     width: "90%",
     textAlign: "justify",
   },
   subtitle: {
-    fontSize: 15,
+    fontSize: Platform.OS === "ios" ? 15 : 13,
     width: "100%",
     marginBottom: 10,
     textAlign: "justify",

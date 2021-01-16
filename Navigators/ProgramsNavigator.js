@@ -18,7 +18,7 @@ export default () => {
           color: "black",
         },
         headerTitleStyle: {
-          fontSize: 22,
+          fontSize: Platform.OS === "ios" ? 18 : 18,
           fontWeight: "bold",
         },
       }}

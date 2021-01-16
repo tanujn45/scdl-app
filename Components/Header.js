@@ -29,7 +29,7 @@ const Header = (props) => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    marginTop: Platform.OS === "ios" ? 25 : 10,
+    marginTop: Platform.OS === "ios" ? 25 : 25,
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     right: 15,
-    fontSize: 22,
+    fontSize: Platform.OS === "ios" ? 22 : 18,
     fontWeight: "bold",
     marginLeft: 40,
   },

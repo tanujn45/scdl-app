@@ -105,7 +105,7 @@ export default () => {
         activeTintColor: "black",
         activeBackgroundColor: Colors.background,
         labelStyle: {
-          fontSize: 17,
+          fontSize: Platform.OS === "ios" ? 17 : 14,
           fontFamily: "robotoRegular",
           textTransform: "uppercase",
           letterSpacing: 0.7,

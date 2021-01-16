@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   date: {
     color: "#fff",
-    fontSize: 28,
+    fontSize: Platform.OS === "ios" ? 28 : 23,
     fontFamily: "robotoBold",
   },
   month: {
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     paddingTop: 3,
     letterSpacing: 2,
-    fontSize: 16,
+    fontSize: Platform.OS === "ios" ? 16 : 13,
     fontFamily: "robotoRegular",
   },
   cardContainerSpecific: {
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   cardTitle: {
-    fontSize: 17,
+    fontSize: Platform.OS === "ios" ? 17 : 14,
     fontFamily: "robotoRegular",
   },
   cardRightContainer: {

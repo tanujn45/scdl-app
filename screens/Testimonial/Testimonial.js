@@ -162,7 +162,7 @@ const Testimonial = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   heading: {
-    fontSize: 24,
+    fontSize: Platform.OS === "ios" ? 24 : 18,
     fontWeight: "bold",
     marginLeft: 15,
     marginBottom: 10,
@@ -177,6 +177,7 @@ const styles = StyleSheet.create({
     width: "90%",
     textAlign: "justify",
     marginBottom: 20,
+    fontSize: Platform.OS === "ios" ? 15 : 13,
   },
   card: {
     marginHorizontal: 20,

@@ -49,14 +49,15 @@ const Contact = ({ navigation }) => {
           <View style={styles.phoneContainer}>
             <View style={styles.contactTextContainer}>
               <Text style={styles.textBold}>Telephone{"\n"}</Text>
-              <Text style={styles.textBold}>Fax</Text>
+              <Text style={styles.textBold}>Fax{"\n"}</Text>
               <Text style={styles.textBold}>WhatsApp </Text>
             </View>
             <View style={styles.contactTextContainer}>
               <Text style={styles.normalText}>+91 2066 211000</Text>
               <Text style={styles.normalText}>+91 9370 722198</Text>
 
-              <Text style={styles.normalText}>+91-2066 211040/66 211041</Text>
+              <Text style={styles.normalText}>+91 2066 211040</Text>
+              <Text style={styles.normalText}>+91 2066 211041</Text>
               <Text style={styles.normalText}>+91 8956 648798</Text>
             </View>
           </View>
@@ -131,7 +132,7 @@ const Contact = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   cardTouchContainer: {
-    height: 200,
+    height: Platform.OS === "ios" ? 240 : 270,
     width: "90%",
     alignSelf: "center",
     marginVertical: 10,
@@ -149,15 +150,15 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     fontFamily: "robotoBold",
     fontWeight: "bold",
-    fontSize: 16,
+    fontSize: Platform.OS === "ios" ? 16 : 14,
     lineHeight: 20,
   },
   normalText: {
-    fontSize: 16,
+    fontSize: Platform.OS === "ios" ? 16 : 14,
     // fontFamily: "robotoBold",
     // fontWeight: "bold",
     marginBottom: 2,
-    lineHeight: 20,
+    lineHeight: Platform.OS === "ios" ? 19.3 : 18,
   },
   contactTextContainer: {
     marginTop: 20,

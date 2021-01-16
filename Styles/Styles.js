@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import Colors from "../Constants/Colors";
 
 const mainStyles = StyleSheet.create({
@@ -51,7 +51,7 @@ const mainStyles = StyleSheet.create({
     height: 65,
   },
   cardTitle: {
-    fontSize: 20,
+    fontSize: Platform.OS === "ios" ? 20 : 17,
     fontFamily: "robotoRegular",
   },
   cardLMContainer: {
@@ -60,7 +60,7 @@ const mainStyles = StyleSheet.create({
   },
   cardLMText: {
     color: Colors.grey,
-    fontSize: 15,
+    fontSize: Platform.OS === "ios" ? 15 : 13,
     paddingRight: 3,
     fontFamily: "robotoRegular",
   },
@@ -72,7 +72,7 @@ const mainStyles = StyleSheet.create({
     borderRadius: 15,
   },
   buttonText: {
-    fontSize: 20,
+    fontSize: Platform.OS === "ios" ? 20 : 17,
     color: "#000",
     textTransform: "uppercase",
   },

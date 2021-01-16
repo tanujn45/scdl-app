@@ -102,11 +102,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   customHeaderTitle: {
-    fontSize: 17,
+    fontSize: Platform.OS === "ios" ? 17 : 13,
     paddingRight: 30,
     color: "white",
     textTransform: "uppercase",
     fontFamily: "robotoBold",
+    textAlign: "right",
   },
   cardContainer: {
     height: 120,
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   cardTitle: {
-    fontSize: 14,
+    fontSize: Platform.OS === "ios" ? 14 : 12,
     textTransform: "uppercase",
     fontFamily: "robotoRegular",
     width: "80%",
