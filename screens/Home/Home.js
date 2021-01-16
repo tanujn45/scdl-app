@@ -38,7 +38,10 @@ const Home = ({ navigation }) => {
     <View style={mainStyles.screen}>
       <Header headingTitle="Home" navigation={navigation} />
       <Text style={styles.welcome}>
-        Welcome <Text style={{ color: Colors.secondary }}>John Doe!</Text>
+        Welcome to{"\n"}
+        <Text style={{ color: Colors.secondary }}>
+          Symbiosis Distance Learning Application
+        </Text>
       </Text>
       <FlatGrid
         itemDimension={130}
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 18,
     alignSelf: "center",
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
 });
 

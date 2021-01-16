@@ -13,7 +13,6 @@ import Colors from "../../Constants/Colors";
 const ProgramDetails = (props) => {
   const [prev, setPrev] = useState(props.route.params);
   const { title, subDetails } = props.route.params;
-  console.log(subDetails);
   props.navigation.setOptions({ title: title });
 
   const SubProgramsItem = (item) => {
@@ -68,10 +67,10 @@ const ProgramDetails = (props) => {
                             styles.cardContainer,
                           ]}
                         >
-                          <Image
+                          {/* <Image
                             style={mainStyles.cardImage}
                             source={item.image}
-                          ></Image>
+                          ></Image> */}
                           <Text style={styles.cardTitle}>{item.subCourse}</Text>
                         </View>
                       </TouchableHighlight>
@@ -110,7 +109,7 @@ const styles = StyleSheet.create({
     fontFamily: "robotoBold",
   },
   cardContainer: {
-    height: 170,
+    height: 120,
     flexDirection: "column",
     width: 170,
     justifyContent: "center",
@@ -122,7 +121,6 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     fontFamily: "robotoRegular",
     width: "80%",
-    marginTop: 20,
     textAlign: "center",
   },
 });

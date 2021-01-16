@@ -1762,7 +1762,7 @@ const Program = ({ navigation }) => {
                 },
               ],
               programStruct: {
-                credit: "80",
+                credit: "32",
                 semester: [
                   {
                     sem: "1",

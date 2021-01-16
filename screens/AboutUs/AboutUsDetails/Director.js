@@ -13,7 +13,6 @@ import { mainStyles } from "../../../Styles/Styles";
 import Colors from "../../../Constants/Colors";
 
 const Director = (props) => {
-  console.log(props);
   props.navigation.setOptions({ title: props.route.params.title });
   return (
     <ScrollView>

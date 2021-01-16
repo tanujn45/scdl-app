@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Image, Text } from "react-native";
+import { StyleSheet, View, Image, Text, Linking } from "react-native";
 import { mainStyles } from "../../Styles/Styles";
 import Colors from "../../Constants/Colors";
 import Header from "../../Components/Header";
-import { FlatList } from "react-native-gesture-handler";
-import { Feather } from "@expo/vector-icons";
+import { TouchableHighlight } from "react-native-gesture-handler";
 
 const Contact = ({ navigation }) => {
   return (
@@ -49,14 +48,16 @@ const Contact = ({ navigation }) => {
           />
           <View style={styles.phoneContainer}>
             <View style={styles.contactTextContainer}>
-              <Text style={styles.textBold}>Telephone </Text>
-              <Text style={styles.textBold}>Fax </Text>
+              <Text style={styles.textBold}>Telephone{"\n"}</Text>
+              <Text style={styles.textBold}>Fax</Text>
               <Text style={styles.textBold}>WhatsApp </Text>
             </View>
             <View style={styles.contactTextContainer}>
               <Text style={styles.normalText}>+91 2066 211000</Text>
-              <Text style={styles.normalText}>+91 2066 211000</Text>
-              <Text style={styles.normalText}>+91 2066 211000</Text>
+              <Text style={styles.normalText}>+91 9370 722198</Text>
+
+              <Text style={styles.normalText}>+91-2066 211040/66 211041</Text>
+              <Text style={styles.normalText}>+91 8956 648798</Text>
             </View>
           </View>
         </View>
@@ -70,22 +71,58 @@ const Contact = ({ navigation }) => {
         ]}
       >
         <View style={styles.socialContainer}>
-          <Image
-            style={styles.socialImage}
-            source={require("../../assets/social/facebook.png")}
-          />
-          <Image
-            style={styles.socialImage}
-            source={require("../../assets/social/instagram.png")}
-          />
-          <Image
-            style={styles.socialImage}
-            source={require("../../assets/social/linkedin.png")}
-          />
-          <Image
-            style={styles.socialImage}
-            source={require("../../assets/social/twitter.png")}
-          />
+          <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#fff"
+            onPress={() =>
+              Linking.openURL("https://www.facebook.com/SCDLDistanceLearning")
+            }
+          >
+            <Image
+              style={styles.socialImage}
+              source={require("../../assets/social/facebook.png")}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#fff"
+            onPress={() =>
+              Linking.openURL("https://www.instagram.com/symbiosisdistance/")
+            }
+          >
+            <Image
+              style={styles.socialImage}
+              source={require("../../assets/social/instagram.png")}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#fff"
+            onPress={() =>
+              Linking.openURL(
+                "https://www.linkedin.com/school/symbiosiscentrefordistancelearning"
+              )
+            }
+          >
+            <Image
+              style={styles.socialImage}
+              source={require("../../assets/social/linkedin.png")}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#fff"
+            onPress={() =>
+              Linking.openURL(
+                "https://twitter.com/intent/follow?source=followbutton&variant=1.0&screen_name=SCDLSymbiosis"
+              )
+            }
+          >
+            <Image
+              style={styles.socialImage}
+              source={require("../../assets/social/twitter.png")}
+            />
+          </TouchableHighlight>
         </View>
       </View>
     </View>
@@ -113,10 +150,14 @@ const styles = StyleSheet.create({
     fontFamily: "robotoBold",
     fontWeight: "bold",
     fontSize: 16,
+    lineHeight: 20,
   },
   normalText: {
     fontSize: 16,
+    // fontFamily: "robotoBold",
+    // fontWeight: "bold",
     marginBottom: 2,
+    lineHeight: 20,
   },
   contactTextContainer: {
     marginTop: 20,

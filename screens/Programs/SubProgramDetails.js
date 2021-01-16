@@ -36,9 +36,6 @@ const SubProgramDetails = (props) => {
           <Tab heading="Program Structure">
             <ProgramStruture progStruct={prev.programStruct} />
           </Tab>
-          <Tab heading="Fees">
-            <Fees />
-          </Tab>
         </Tabs>
       </Container>
     </StyleProvider>
