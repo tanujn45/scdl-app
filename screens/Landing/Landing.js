@@ -6,7 +6,7 @@ import { TouchableHighlight } from "react-native-gesture-handler";
 
 const Landing = ({ navigation }) => {
   const homeNavigation = () => {
-    navigation.navigate("SignIn");
+    navigation.navigate("Drawer");
   };
 
   return (

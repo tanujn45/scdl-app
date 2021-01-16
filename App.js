@@ -36,11 +36,11 @@ export default function App() {
           component={Landing}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="SignIn"
           component={SignIn}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen name="Drawer" component={Drawer} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -17,6 +17,7 @@ import Colors from "../Constants/Colors";
 import { Feather } from "@expo/vector-icons";
 import ProgramsNavigator from "./ProgramsNavigator";
 import AboutUsNavigator from "./AboutUsNavigator";
+import AboutTheApp from "../screens/AboutTheApp/AboutTheApp";
 import Header from "../Components/Header";
 
 const Drawer = createDrawerNavigator();
@@ -157,6 +158,14 @@ export default () => {
         component={Contact}
         options={({ navigation }) => ({
           title: "Contact Us",
+          headerLeft: (props) => <Header navigation={navigation} />,
+        })}
+      />
+      <Drawer.Screen
+        name="AboutTheApp"
+        component={AboutTheApp}
+        options={({ navigation }) => ({
+          title: "About The App",
           headerLeft: (props) => <Header navigation={navigation} />,
         })}
       />
