@@ -8,7 +8,7 @@ import { Montserrat_100Thin } from "@expo-google-fonts/montserrat";
 const AboutTheApp = ({ navigation }) => {
   return (
     <View style={[mainStyles.screen, { flex: 1 }]}>
-      <Header headingTitle="Contact Us" navigation={navigation} />
+      <Header headingTitle="About The App" navigation={navigation} />
       <View style={styles.containerBox}>
         <Image
           style={styles.logoContainer}
