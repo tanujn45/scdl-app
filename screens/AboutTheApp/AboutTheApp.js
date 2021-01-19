@@ -25,7 +25,7 @@ const AboutTheApp = ({ navigation }) => {
         <Text style={styles.headText}>Center for Distance Learning</Text>
         <Text style={styles.version}>Version: 1.0.0</Text>
         <Text style={styles.dev}>
-          Developers - {"\n"}Tanuj Namdeo, Aditya Pathak, Hemant Jangid, Prateek
+          Developers - {"\n"}Tanuj Namdeo, Aditya Pathak, Hemant Jangid, Pratik
           Rupani
         </Text>
       </View>
